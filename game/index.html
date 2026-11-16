@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HONEYBEE — Fill the Hive Before Sunset</title>
+<style>
+  html, body {
+    margin: 0; padding: 0; background: #dfeefc; height: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px;
+  }
+  #wrap {
+    position: relative; width: min(1280px, 96vw);
+    box-shadow: 0 18px 60px rgba(30, 60, 110, 0.35);
+    border-radius: 14px; overflow: hidden; background: #7ec8f7;
+  }
+  canvas { display: block; width: 100%; height: auto; }
+  #bar {
+    width: min(1280px, 96vw); display: flex; justify-content: space-between; align-items: center;
+    color: #5a3a0a; font-size: 14px;
+  }
+  #bar b { color: #b8860b; }
+  #mute {
+    cursor: pointer; border: 1px solid #b8860b; background: #fff8e6; color: #7a4a12;
+    border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 700;
+  }
+  #mute:hover { background: #ffedb8; }
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="game"></canvas></div>
+<div id="bar">
+  <span>🐝 <b>WASD / arrows</b> fly &nbsp;•&nbsp; land on flowers to gather pollen &nbsp;•&nbsp; carry it home to the hive &nbsp;•&nbsp; <b>1/2/3</b> difficulty &nbsp;•&nbsp; <b>M</b> mute &nbsp;•&nbsp; <b>R</b> restart</span>
+  <button id="mute" type="button">🔊 sound on</button>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
